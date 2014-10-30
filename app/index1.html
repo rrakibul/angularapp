@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <title>Google Phone Gallery</title>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="js/controllers2.js"></script>
+</head>
+<body>
+<div ng-controller="myCtrl">
+
+    <input type="button" ng-click="showAnswers()" value="Show answers" />
+    <hr />
+    <h2>Quiz1:</h2>
+    <ul>
+        <li ng-repeat="item in items | filter:selectedFilter.filterExpr">
+            {{item.title}}
+            <ol>
+                <li>
+                    <input type="checkbox" ng-click="yourAnswer(item.id, item.ans1['id'])" ng-checked="item.ansGiven == item.ans1['id']?true:''" />
+                    <span ng-class="item.correct == item.ans1['id'] ? 'correct' : (item.ansGiven == item.ans1['id'] ? 'ans-given' : '')">{{item.ans1['title']}}</span>
+                </li>
+                <li>
+                    <input type="checkbox" ng-click="yourAnswer(item.id, item.ans2['id'])" ng-checked="item.ansGiven == item.ans2['id']?true:''" />
+                    <span ng-class="item.correct == item.ans2['id'] ? 'correct' : (item.ansGiven == item.ans2['id'] ? 'ans-given' : '')">{{item.ans2['title']}}</span>
+                </li>
+                <li>
+                    <input type="checkbox" ng-click="yourAnswer(item.id, item.ans3['id'])" ng-checked="item.ansGiven == item.ans3['id']?true:''" />
+                    <span ng-class="item.correct == item.ans3['id'] ? 'correct' : (item.ansGiven == item.ans3['id'] ? 'ans-given' : '')">{{item.ans3['title']}}</span>
+                </li>
+            </ol>
+            <hr/>
+            <a href="" ng-click="setFilterGoPrev(item.prev)" ng-hide="item.prev == '0'">Prev</a> | Question: {{item.id}}
+            <a href="" ng-click="setFilterGoNext(item.next)" ng-hide="item.next == '0'">Next</a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

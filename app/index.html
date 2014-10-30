@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <title>Google Phone Gallery</title>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="js/controllers2.js"></script>
+</head>
+<body>
+<div ng-controller="myCtrl">
+    <button ng-click='showResult()'>
+        <span>{{resShowing ? 'Restart Quiz' : 'Show Result'}}</span>
+    </button>
+    <hr />
+    <h2>Quiz1:</h2>
+    <ul>
+        <li ng-repeat="item in items | filter:selectedFilter.filterExpr">
+            {{item.title}}
+            <ol>
+                <li ng-repeat="ans in item.answers">
+                    <input type="checkbox" ng-model="ans.given" value="{{ans.id}}" ng-click="test()"/>
+                    <span ng-class="{'given': ans.given, 'correct': resShowing && ans.correct, 'wrong': resShowing && ans.given && !ans.correct }">{{ans.title}}</span>
+                </li>
+            </ol>
+            <hr/>
+            <a href="" ng-click="setFilterGoPrev(item.prev)" ng-hide="item.prev == '0'">Prev</a> | Question: {{item.id}}
+            <a href="" ng-click="setFilterGoNext(item.next)" ng-hide="item.next == '0'">Next</a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
