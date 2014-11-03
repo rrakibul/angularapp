@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <title>Google Phone Gallery</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="js/controllers.js"></script>
+</head>
+<body>
+<div ng-controller="initCtrl">
+    <h2>Welcome to {{items.appTitle}}</h2>
+    <hr />
+    <h4>Available quizzes</h4>
+    <ul>
+        <li ng-repeat="(key, quiz) in items">
+            <a href="singleQuiz.html?id={{key}}">{{quiz.title}}</a>
+        </li>
+    </ul>
+
+
+
+</div>
+</body>
+</html>

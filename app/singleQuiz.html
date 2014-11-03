@@ -10,12 +10,14 @@
     <script src="js/controllers.js"></script>
 </head>
 <body>
-<div ng-controller="myCtrl">
+<div ng-controller="singleQuizCtrl">
+
+    <hr />
+    <h2>Quiz: {{quizTitle}}</h2>
+    <hr/>
     <button ng-click='showResult()'>
         <span>{{resShowing ? 'Restart Quiz' : 'Show Result'}}</span>
     </button>
-    <hr />
-    <h2>Quiz1:</h2>
     <ul>
         <li ng-repeat="item in items | filter:selectedFilter.filterExpr">
             {{item.title}}

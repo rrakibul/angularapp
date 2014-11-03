@@ -1,37 +1,88 @@
-[
-    {
-        "title": "item 1 question",
-        "answers": [
-            {"id": 1, "title": "item1 ans1"},
-            {"id": 2, "title": "item1 ans2"},
-            {"id": 3, "title": "item1 ans3"}
-        ],
-        "prev": 0,
-        "id": 1,
-        "next": 2
-    },
-    {
-        "title": "item 2 question",
-        "answers": [
-            {"id": 1, "title": "item2 ans1"},
-            {"id": 2, "title": "item2 ans2"},
-            {"id": 3, "title": "item2 ans3"},
-            {"id": 4, "title": "item2 ans4"}
-        ],
-        "prev": 1,
-        "id": 2,
-        "next": 3
-    },
-    {
-        "title": "item 3 question",
-        "answers": [
-            {"id": 1, "title": "item3 ans1"},
-            {"id": 2, "title": "item3 ans2"},
-            {"id": 3, "title": "item3 ans3"}
-        ],
-        "prev": 2,
-        "id": 3,
-        "next": 0
-    }
+{
+    "appTitle" : "RBS App",
+    "appDeveloper" : "RBS",
+    "quizzes" : [
+        {
+            "id" : 1,
+            "title" : "Quiz1",
+            "data" : [
+                {
+                    "title": "Quiz1 item 1 question",
+                    "answers": [
+                        {"id": 1, "title": "item1 ans1"},
+                        {"id": 2, "title": "item1 ans2"},
+                        {"id": 3, "title": "item1 ans3"}
+                    ],
+                    "prev": 0,
+                    "id": 1,
+                    "next": 2
+                },
+                {
+                    "title": "Quiz1 item 2 question",
+                    "answers": [
+                        {"id": 1, "title": "item2 ans1"},
+                        {"id": 2, "title": "item2 ans2"},
+                        {"id": 3, "title": "item2 ans3"},
+                        {"id": 4, "title": "item2 ans4"}
+                    ],
+                    "prev": 1,
+                    "id": 2,
+                    "next": 3
+                },
+                {
+                    "title": "Quiz1 item 3 question",
+                    "answers": [
+                        {"id": 1, "title": "item3 ans1"},
+                        {"id": 2, "title": "item3 ans2"},
+                        {"id": 3, "title": "item3 ans3"}
+                    ],
+                    "prev": 2,
+                    "id": 3,
+                    "next": 0
+                }
 
-]
+            ]
+        },
+        {
+            "id" : 2,
+            "title" : "Quiz2",
+            "data" : [
+                {
+                    "title": "Quiz2 item 1 question",
+                    "answers": [
+                        {"id": 1, "title": "item1 ans1"},
+                        {"id": 2, "title": "item1 ans2"},
+                        {"id": 3, "title": "item1 ans3"}
+                    ],
+                    "prev": 0,
+                    "id": 1,
+                    "next": 2
+                },
+                {
+                    "title": "Quiz2 item 2 question",
+                    "answers": [
+                        {"id": 1, "title": "item2 ans1"},
+                        {"id": 2, "title": "item2 ans2"},
+                        {"id": 3, "title": "item2 ans3"},
+                        {"id": 4, "title": "item2 ans4"}
+                    ],
+                    "prev": 1,
+                    "id": 2,
+                    "next": 3
+                },
+                {
+                    "title": "Quiz2 item 3 question",
+                    "answers": [
+                        {"id": 1, "title": "item3 ans1"},
+                        {"id": 2, "title": "item3 ans2"},
+                        {"id": 3, "title": "item3 ans3"}
+                    ],
+                    "prev": 2,
+                    "id": 3,
+                    "next": 0
+                }
+            ]
+        }
+    ]
+
+}
